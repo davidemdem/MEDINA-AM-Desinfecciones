@@ -15,5 +15,5 @@
 ##### * Monserrat
 
 ##### **Logotipo de la empresa.**
-###### ![logotipo de AM DESINFECCIONES](./AM%20DESINFECICIONENENES.png)
+###### !(./AM%20DESINFECICIONENENES.png)
 
