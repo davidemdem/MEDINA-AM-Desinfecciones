@@ -15,7 +15,7 @@
 ##### * Monserrat
 
 ##### **Logotipo de la empresa.**
-###### !(AM DESINFECICIONENENES.png)
+###### !(https://github.com/davidemdem/MEDINA-AM-Desinfecciones/blob/main/logo-AmDesinfecciones.png)
 
 ###### *Bocetado de Wireframe*
 ###### **https://www.figma.com/file/QPzhfP0aMUFJDlyPDt8Yti/Untitled?node-id=0%3A1**
