@@ -15,5 +15,7 @@
 ##### * Monserrat
 
 ##### **Logotipo de la empresa.**
-###### !(./AM%20DESINFECICIONENENES.png)
+###### !(AM DESINFECICIONENENES.png)
 
+###### *Bocetado de Wireframe*
+###### **https://www.figma.com/file/QPzhfP0aMUFJDlyPDt8Yti/Untitled?node-id=0%3A1**
