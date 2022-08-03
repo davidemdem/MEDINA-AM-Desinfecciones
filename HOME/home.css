@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Prompt&display=swap');
+@import url('https://api.iconify.design/ic/outline-pest-control.svg');
+
+header {
+    border:none;
+    padding:10px 10px;
+    font-family:inika;
+    text-align:left;
+    background-color: #ff5151;
+}
+header img{
+    width: 200px;
+    height: 100%;
+}
+
+h1{font-family: inika;}
+main {
+    
+    background-color: #699BF7;
+    font-family: inika;
+}
+section{
+    padding: 50px;
+    background-color: #4ECB71;
+}
+footer{
+    font-family: inika;
+    background-color: #ff5151;
+    text-align:center;
+}
