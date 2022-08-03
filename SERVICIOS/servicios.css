@@ -16,7 +16,6 @@ header img{
     width: 200px;
     height: 100%;  
 }
-
 main {
     background-color: #699BF7;
 }
@@ -43,7 +42,8 @@ main .producto{
     font-size: larger;
     justify-content: space-around;
 }
-.preguntas{display: flex;
+.preguntas{
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
