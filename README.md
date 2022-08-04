@@ -12,10 +12,10 @@
 #### **Tipografia Principal**
 ##### * Finlandia
 ##### * Gantari
-##### * Monserrat
+##### * Inika*
 
 ##### **Logotipo de la empresa.**
-###### ![LogoAM](/IMAGENES/logo%20de%20la%20empresa.png)
+###### !**[LogoAM](/IMAGENES/logo%20de%20la%20empresa.png)**
 
 ###### *Bocetado de Wireframe*
 ###### **https://www.figma.com/file/QPzhfP0aMUFJDlyPDt8Yti/Untitled?node-id=18%3A226**

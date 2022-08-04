@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Prompt&display=swap');
 @import url('https://api.iconify.design/ic/outline-pest-control.svg');
 
+
 *{
     margin:0;
     font-family: inika;
@@ -12,7 +13,14 @@ ul{
     flex-direction: row;
     justify-content: space-around;
 }
-header img{
+header nav ul a img{
+    width:30px;
+    height: 100%;
+}
+header nav ul{
+    align-items: center;
+}
+header img {
     width: 200px;
     height: 100%;  
 }

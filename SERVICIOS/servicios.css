@@ -12,6 +12,13 @@ ul{
     flex-direction: row;
     justify-content: space-around;
 }
+header nav ul a img{
+    width:30px;
+    height: 100%;
+}
+header nav ul{
+    align-items:center;
+}
 header img{
     width: 200px;
     height: 100%;  
