@@ -15,7 +15,7 @@
 ##### * Inika*
 
 ##### **Logotipo de la empresa.**
-###### **(/IMAGENES/logo%20de%20la%20empresa.png)**
+###### **![LogoDeLaEmpresa](IMAGENES\LogoDeLaEmpresa.png)**
 
 ###### *Bocetado de Wireframe*
 ###### **https://www.figma.com/file/QPzhfP0aMUFJDlyPDt8Yti/Untitled?node-id=18%3A226**
