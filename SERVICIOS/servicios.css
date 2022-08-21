@@ -1,72 +1,207 @@
 @import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Prompt&display=swap');
 @import url('https://api.iconify.design/ic/outline-pest-control.svg');
+/*mobile w:360 h 740
+  desktop w:1280 h720
+*/
 
-*{
-    margin:0;
-    font-family:inika
+* {
+    margin: 0px;
+    font-family: inika;
+    padding: 0px;
+    box-sizing: border-box;
+
 }
-ul{
-    padding:10px;
-    background-color: #ffffff;
+
+/*---------------header-------------------*/
+
+hr {
+    height: 20px;
+    width: 100%;
+    background-color: #ff5151;
+}
+
+ul {
+    text-align: start;
+    height: 80%;
+}
+
+body header ul img {
+    width: 20%;
+    height: auto;
+}
+
+nav {
+    width: 100%;
+    height: 20%;
+}
+
+body header nav div img {
+    width: 18px;
+    height: 18px;
+}
+
+p {
+    font-size: x-small;
+    padding: 1px 5px 5px;
+}
+
+ul {
+    margin: 5px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
-header nav ul a img{
-    width:30px;
-    height: 100%;
-}
-header nav ul{
-    align-items:center;
-}
-header img{
-    width: 200px;
-    height: 100%;  
-}
+
+
+/*------------------main-------------------*/
 main {
     background-color: #699BF7;
+    display: flex;
+    flex-direction: column;
 }
-main a{
-    margin:20px;
-    padding:20px 20px;
+
+h1 {
+    text-align: center;
     font-size: large;
 }
-main p{
-    background-color: #4ECB71;
-    width: 250px;
-    height: 100%;
-    padding: 5px;
-    margin:5px 50px
-}
-.producto{
-    margin:20px 200px;
-    padding: 40px;
+
+.producto {
+    align-self: center;
+    width: 70%;
+    padding: 15px 15px;
+    margin: 10px;
     background-color: #4ECB71;
     display: flex;
-    justify-content:center;
-}
-main .producto{
-    font-size: larger;
-    justify-content: space-around;
-}
-.preguntas{
-    display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-}
-footer{
-    padding: 50px;
-    background-color: #ff5151;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-footer img{
-    width: 40px;
-    height: 100%;
-}
-footer p{
-    display:flex;
-    flex-direction:column;
     align-items: center;
+    border-radius: 10px;
+
+}
+
+.producto.p1 {
+    width: 45%;
+    font-size: large;
+    
+}
+
+.producto.p2 {
+    width: 30%;
+    font-size:x-large;
+}
+
+main div {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.contenedo_msj {
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+
+}
+
+.contenedo_msj .mensaje-izq,
+.contenedo_msj .mensaje-der {
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+}
+
+.contenedo_msj .mensaje-der {
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    -o-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+.mensaje-izq .cuerpo_msj,
+.mensaje-der .cuerpo_msj {
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    margin-left: 20px;
+    width: calc(100% - 50px - 20px);
+    position: relative;
+}
+
+.mensaje-der .cuerpo_msj {
+    margin-right: 20px;
+    margin-left: 0;
+}
+
+.mensaje-izq .cuerpo_msj .msj-texto,
+.mensaje-der .cuerpo_msj .msj-texto {
+    padding: 10px;
+    font-size: 0.8em;
+    background-color: #4ECB71;
+    border-radius: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.mensaje-der .cuerpo_msj .msj-texto {
+    background-color: #4ECB71;
+}
+
+.mensaje-izq .cuerpo_msj:before,
+.mensaje-der .cuerpo_msj:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 13px 13px 13px 13px;
+    top: 5px;
+}
+
+.mensaje-izq .cuerpo_msj:before {
+    border-right-color: #4ECB71;
+    left: -25px;
+}
+
+.mensaje-der .cuerpo_msj:before {
+    border-left-color: #4ECB71;
+    right: -25px;
+}
+p{
+    font-size:small;
+}
+
+/*------------------footer-----------------*/
+footer {
+    background-color: #ff5151;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer img {
+    width: 25px;
+    height: 25px;
+}
+
+footer div {
+    padding: 5px;
+    width: 130px;
+    text-align: center;
 }
