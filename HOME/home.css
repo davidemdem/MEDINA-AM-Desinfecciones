@@ -1,63 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Prompt&display=swap');
 @import url('https://api.iconify.design/ic/outline-pest-control.svg');
+/*mobile w:360 h 740
+  desktop w:1280 h720
+*/
 
-hr{
-    height: 20px;
-    background-color: #ff5151;
-}
 *{
     margin:0;
     font-family: inika;
-}
-ul{
-    padding:10px;
-    background-color: #ffffff;
+    padding:0px;
+    box-sizing:border-box;}
+
+/*--------------header---------------*/
+hr{
+    width: 100%;
+    height: 20px; 
+    background-color: #ff5151;}
+
+body nav ul img{
+    width:25%;
+    height: auto;}
+
+nav {
+    width:100%;
+    height:20%;}
+
+body header nav div img {
+    width: 16px;
+    height: 16px;}
+
+p {
+    font-size: x-small;
+    padding: 1px 5px 5px;}
+
+ul {
+    margin: 3px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-}
-header nav ul a img{
-    width:30px;
-    height: 100%;
-}
-header nav ul{
-    align-items: center;
-}
-header img {
-    width: 200px;
-    height: 100%;  
-}
+    justify-content: space-between;
+    align-items:center;
+    text-align: start;
+    height: 80%;}
+
+ul div{
+    display:flex;
+    flex-direction: column;
+    align-items: center;}
+
+/*-----------main--------------*/
 main {
     background-color: #699BF7;
-}
-main h1{
-    margin:20px;
-    padding:20px 20px;
-    font-size: large;
-}
-section{ margin:20px 200px;
-    padding: 40px;
-    background-color: #4ECB71;
     display: flex;
-    justify-content:center;
-}
-main p{
-    margin-right: 200px;
-    text-align: end;
-}
+    flex-direction: column;}
+
+/*-----------footer-------------------*/
 footer{
-    padding: 50px;
     background-color: #ff5151;
+    width: 100%;
+    height: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-}
-footer img{
-    width: 40px;
-    height: 100%;
-}
-footer p{
-    display:flex;
-    flex-direction:column;
     align-items: center;
+}
+
+footer img {
+    width: 25px;
+    height: 25px;
+}
+
+footer div {
+    padding: 5px;
+    width: 130px;
+    text-align: center;
 }
