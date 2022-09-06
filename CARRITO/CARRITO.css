@@ -48,6 +48,20 @@ ul div{
     flex-direction: column;
     align-items: center;
 }
+@media(max-width:400px){
+    ul{
+        flex-direction:column-reverse;
+    }
+    ul div{
+        flex-direction: row;
+    }
+}
+@media(min-width:600px){
+    p{
+        font-size: x-large;
+    }
+}
+
 /*------------------main-------------------*/
 main {
     background-color: #699BF7;
@@ -65,6 +79,8 @@ main {
     border-radius:2px;
     justify-content: space-around;
 }
+
+
 .box-precio{
     background-color: #4ECB71;
     width:20%;
@@ -84,6 +100,17 @@ button{
 .box-cantidades{
     background-color: #4ECB71;
     font-size:small;
+}
+@media(min-width:500px){
+    .box-carrito{
+        width:60%;
+        margin: 15px 15px;
+        padding:20px;}
+ .box-servicio{
+    width: 40%;
+ }       
+
+
 }
 /*------------------footer-----------------*/
 footer {
@@ -108,4 +135,18 @@ footer img {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+a{
+    color:black;
+    text-decoration: none;
+}
+@media(max-width:400px){
+    footer{
+        flex-direction: column;
+        height: auto;
+    }
+    footer div{
+        width:60%;
+        padding:10px;
+    }
 }
