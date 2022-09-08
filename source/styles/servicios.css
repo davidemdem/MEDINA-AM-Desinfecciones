@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Prompt&display=swap');
+@import url('https://api.iconify.design/ic/outline-pest-control.svg');
+/*mobile w:360 h 740
+  desktop w:1280 h720
+*/
+
+* {
+    margin: 0px;
+    font-family: inika;
+    padding: 0px;
+    box-sizing: border-box;}
+
+/*---------------header-------------------*/
+
+hr { 
+    width: 100%;
+    height: 20px;
+    background-color: #ff5151;}
+
+body header ul img {
+    width: 25%;
+    height: auto;}
+
+nav {
+    width: 100%;
+    height: 20%;}
+
+body header nav div img {
+    width: 16px;
+    height: 16px;}
+
+p {
+    font-size: x-small;
+    padding: 1px 5px 5px;}
+
+ul {
+    margin: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    text-align: start;
+    height: 80%;
+
+}
+ul div{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media(max-width:400px){
+    ul{
+        flex-direction:column-reverse;
+    }
+    ul div{
+        flex-direction: row;
+    }
+}
+@media(min-width:600px){
+    p{
+        font-size: x-large;
+    }
+}
+
+/*------------------main-------------------*/
+main {
+    background-color: #699BF7;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    font-size: large;
+}
+
+.producto {
+    align-self: center;
+    width: 70%;
+    padding: 15px 15px;
+    margin: 10px;
+    background-color: #4ECB71;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+
+}
+
+.producto.p1 {
+    width: 45%;
+    font-size: large;
+
+}
+
+.producto.p2 {
+    width: 30%;
+    font-size:x-large;
+}
+
+main div {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.contenedo_msj {
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+
+}
+
+.contenedo_msj .mensaje-izq,
+.contenedo_msj .mensaje-der {
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+}
+
+.contenedo_msj .mensaje-der {
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    -o-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+.mensaje-izq .cuerpo_msj,
+.mensaje-der .cuerpo_msj {
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    margin-left: 20px;
+    width: calc(100% - 50px - 20px);
+    position: relative;
+}
+
+.mensaje-der .cuerpo_msj {
+    margin-right: 20px;
+    margin-left: 0;
+}
+
+.mensaje-izq .cuerpo_msj .msj-texto,
+.mensaje-der .cuerpo_msj .msj-texto {
+    padding: 10px;
+    font-size: 0.8em;
+    background-color: #4ECB71;
+    border-radius: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.mensaje-der .cuerpo_msj .msj-texto {
+    background-color: #4ECB71;
+}
+
+.mensaje-izq .cuerpo_msj:before,
+.mensaje-der .cuerpo_msj:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 13px 13px 13px 13px;
+    top: 5px;
+}
+
+.mensaje-izq .cuerpo_msj:before {
+    border-right-color: #4ECB71;
+    left: -25px;
+}
+
+.mensaje-der .cuerpo_msj:before {
+    border-left-color: #4ECB71;
+    right: -25px;
+}
+p{
+    font-size:small;
+}
+
+/*------------------footer-----------------*/
+footer {
+    background-color: #ff5151;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer img {
+    width: 25px;
+    height: 25px;
+}
+
+footer div {
+    padding: 5px;
+    width: 130px;
+    text-align: center;
+}
+a{
+    color:black;
+    text-decoration: none;
+}
+@media(max-width:400px){
+    footer{
+        flex-direction: column;
+        height: auto;
+    }
+    footer div{
+        width:60%;
+        padding:10px;
+    }
+}
