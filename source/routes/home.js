@@ -1,10 +1,16 @@
 
-const express=require('express');
-const { renderHomeView,renderLoginView, renderDetailServiceView} = require('../controllers/home');
-const router=express.Router(); //solo necesitamos el modulo de rutas de express//
+const express = require('express');
 
-router.get('/home',renderHomeView);
-router.get('/login',renderLoginView);
-router.get('/services',renderDetailServiceView);
+const { renderHomeView,
+    renderLoginView,
+    renderDetailServiceView,
+    renderServicesSelected } = require('../controllers/home');
 
-module.exports=router;
+const router = express.Router(); //solo necesitamos el modulo de rutas de express//
+
+router.get('/home', renderHomeView);
+router.get('/login', renderLoginView);
+router.get('/servicios', renderDetailServiceView);
+router.get('/carrito', renderServicesSelected);
+
+module.exports = router;

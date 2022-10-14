@@ -12,13 +12,13 @@ app.get('/',(req,res)=>{
     res.send('ESTOY EN HOME')}
 )
 app.get('/detalles',(req,res)=>{
-    res.send('servicios.ejs')
+    res.render('servicios.ejs')
 })
 app.get('/login',(req,res)=>{
    res.render('login.ejs')
 })
 app.get('/carrito',(req,res)=>{
-    res.send('estoy en el carrito')
+    res.render('carrito.ejs')
 })
 
 
