@@ -13,4 +13,9 @@ router.get('/login', renderLoginView);
 router.get('/servicios', renderDetailServiceView);
 router.get('/carrito', renderServicesSelected);
 
+app.use(require('./routes/home'))
+app.use(express.json()) //poder utilizar datos json
+
+const author=require("../../models").authors
+
 module.exports = router;

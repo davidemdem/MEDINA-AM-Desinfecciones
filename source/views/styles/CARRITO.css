@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Prompt&display=swap');
+@import url('https://api.iconify.design/ic/outline-pest-control.svg');
+/*mobile w:360 h 740
+  desktop w:1280 h720
+*/
+
+* {
+    margin: 0px;
+    font-family: inika;
+    padding: 0px;
+    box-sizing: border-box;}
+
+/*---------------header-------------------*/
+
+hr { 
+    width: 100%;
+    height: 20px;
+    background-color: #ff5151;}
+
+body header ul img {
+    width: 25%;
+    height: auto;}
+
+nav {
+    width: 100%;
+    height: 20%;}
+
+body header nav div img {
+    width: 16px;
+    height: 16px;}
+
+p {
+    font-size: x-small;
+    padding: 1px 5px 5px;}
+
+ul {
+    margin: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    text-align: start;
+    height: 80%;
+
+}
+ul div{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media(max-width:400px){
+    ul{
+        flex-direction:column-reverse;
+    }
+    ul div{
+        flex-direction: row;
+    }
+}
+@media(min-width:600px){
+    p{
+        font-size: x-large;
+    }
+}
+
+/*------------------main-------------------*/
+main {
+    background-color: #699BF7;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-carrito{
+    background-color: #ff5151;
+    padding:5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius:2px;
+    justify-content: space-around;
+}
+
+
+.box-precio{
+    background-color: #4ECB71;
+    width:20%;
+    border-radius: 2px;
+    padding:2px;
+    
+}
+button{
+    font-size:small;
+}
+.box-servicio{
+    background-color: #d88f8f;
+    width: 50%;
+    border-radius: 2px;
+    
+}
+.box-cantidades{
+    background-color: #4ECB71;
+    font-size:small;
+}
+@media(min-width:500px){
+    .box-carrito{
+        width:60%;
+        margin: 15px 15px;
+        padding:20px;}
+ .box-servicio{
+    width: 40%;
+ }       
+
+
+}
+/*------------------footer-----------------*/
+footer {
+    background-color: #ff5151;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer img {
+    width: 25px;
+    height: 25px;
+}
+
+.footer {
+    padding: 5px;
+    width: 30%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a{
+    color:black;
+    text-decoration: none;
+}
+@media(max-width:400px){
+    footer{
+        flex-direction: column;
+        height: auto;
+    }
+    footer div{
+        width:60%;
+        padding:10px;
+    }
+}
