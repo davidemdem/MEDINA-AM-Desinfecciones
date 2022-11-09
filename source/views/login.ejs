@@ -5,7 +5,8 @@
 </head>
 <body>
     
-    <main>
+    <main> 
+        
         <p1>SOS CLIENTE REGULAR NUESTRO?</p1>
         <div class="ClienteRegular">
             <form action="/login" method="POST">
@@ -15,23 +16,27 @@
                 <label for="password">Contraseña</label><br>
                 <input type="password" name="password" id="password" required> <br>
                 <button type="submit">ACCEDER</button>
-
+            
 
             </form>
         </div>
+
         <p1>SOS CLIENTE NUEVO? DEJANOS TUS DATOS</p1>
+
         <div class="ClienteNuevo">
-            <p>NOMBRE DE TU NEGOCIO:</p>
-            <div class="box">
-                <input type="text">
-            </div>
-            <p>DIRECCION DE TU NEGOCIO:</p>
-            <div class="box">
-                <input type="text">
-            </div>
-            <div class="botones">
-                <p>ACCEDER</p>
-            </div>
+            <form action="/registrar" method="POST">
+
+                <label for="BusinessName">NOMBRE DE NEGOCIO</label><br>
+                <input type="text" name="BusinessName" id="BusinessName" > <br>
+                
+                <label for="Email">DEJANOS TU EMAIL DE CONTACTO</label><br>
+                <input type="email" name="Email" id="Email" > <br>
+
+                <label for="username">DEJANOS TU NOMBRE Y APELLIDO</label><br>
+                <input type="text" name="username" id="username"> <br>
+
+                <button type="submit">REGISTRARSE</button>
+            </form>
         </div>
     </main>
 

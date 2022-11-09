@@ -1,0 +1,1 @@
+//hacer funcion write y read.
