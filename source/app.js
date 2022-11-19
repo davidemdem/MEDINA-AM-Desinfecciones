@@ -4,7 +4,7 @@ const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
 const cookie = require('cookie-parser');
-const { body, validationResult } = require('express-validator');
+
 
 
 //const router = require('/routes/home');//
@@ -51,24 +51,7 @@ app.get('/carrito', (req, res) => {
     res.render('carrito.ejs')
 })
 
-app.post('/registrar',
-    [body('BusinessName', 'Ingrese el Nombre de Su Negocio')
-        .exists()
-        .isLength({ min: 4 }),
-    body('Email', 'Ingrese un Email valido')
-        .exists()
-        .isEmail(),
-    body('username', 'Ingrese su nombre y apellido')
-        .exists()
-        .isLength({ min: 8 })] ,
-        (req, res) => {
-            console.log(req.body)
-        const errors = validationResult(req);
-        if(!errors.isEmpty()) {  //si los errores no estan vacios
-             res.status(400).json({errors:errors.array()})
-             console.log(errors)
-            }
-        });
+
 
 
 

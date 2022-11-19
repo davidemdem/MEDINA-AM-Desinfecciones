@@ -1,62 +1,84 @@
-const bcrypt=require('bcrypt');
+const bcrypt = require('bcrypt');
 
-const users=require('../models/user');
-const session = require('express-session');
+const fs = require('fs');
 
+let read = fs.readFileSync('user.json', 'utf-8');
+let readUsers = JSON.parse(read);
 
-
-/*/ renderizar la vista para cargar un producto//
-const renderHomeView = (req, res) => {
-    return res.render('home.ejs');
-}
-*/
 const renderLoginView = (req, res) => {
 
-    return res.render('login.ejs')
+    return res.render('home.ejs')
 }
 const renderDetailServiceView = (req, res) => {
     return res.render('servicios.ejs')
 }
 const renderServicesSelected = (req, res) => {
     return res.render('carrito.ejs')
-}  
+}
 
-const login=(req,res)=>{ 
+const login = (req, res) => {
+
     const { usernameOrEmail, password } = req.body;
-    const user=users.filter (u => u.email===usernameOrEmail || u.username===usernameOrEmail)
-    if(user.length == 0){
+    const user = readUsers.filter(u => u.email === usernameOrEmail || u.username === usernameOrEmail)
+    if (user.length == 0) {
         return res.send('Usuario o contraseña incorrecta');
     }
-    const userData=user[0]
-    
+    const userData = user[0]
+
     const isValidPassword = bcrypt.compareSync(password, userData.password);
 
-    if(!isValidPassword){
+    if (!isValidPassword) {
         return res.send("Usuario o contraseña incorrecto");
     }
-    
+
     delete userData.password;//eliminamos la contraseña de los datos del usuario
-    
-    req.session.userData=userData; //creamos la sesion con los datos del usuario
-    
+
+    req.session.userData = userData; //creamos la sesion con los datos del usuario
+
     return res.redirect('/home')
 
-    
+
     res.status(200).json(req.body)
-  }   
-const renderHomeView=(req, res) =>{
+}
+const renderHomeView = (req, res) => {
     return res.render('home.ejs')
 }
-const logout=(req, res) =>{
+const registrar = (req, res) => {
+    return res.render('home.ejs')
+}
+
+const renderRegister = (req, res) => {
+    const { username, email, password, name } = req.body
+    const passwordHashed = bcrypt.hashSync(password, 10)//
+    //const user=users.filter(u => u.username == BusinessName || u.password == password || u.email == email || u.username == username)
+
+    let newUser = {
+        id: readUsers.length + 1,
+        username,
+        email,
+        password: passwordHashed,
+        name,
+    }
+    readUsers.push(newUser);
+    let userDataBase = JSON.stringify(readUsers);
+    console.log('hola')
+    fs.writeFileSync('user.json', userDataBase, 'utf-8',);
+    res.redirect('home');
+
+}
+
+
+const logout = (req, res) => {
     req.session.destroy();
     return res.redirect('login');
 }
-
 
 module.exports = {
     renderHomeView,
     renderLoginView,
     renderDetailServiceView,
     renderServicesSelected,
-    login,logout
+    login, logout,
+    registrar,
+    renderRegister
 };
