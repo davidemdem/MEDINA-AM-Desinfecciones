@@ -33,6 +33,7 @@ const validateRegister=(req,res, next)=> {
              console.log(errors)
             }
         }
+        next();
 }
 
 

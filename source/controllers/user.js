@@ -1,13 +1,18 @@
 const bcrypt = require('bcrypt');
 
 const fs = require('fs');
+const usuario =require('../../models').usuarios
 
 let read = fs.readFileSync('user.json', 'utf-8');
 let readUsers = JSON.parse(read);
 
+
+
+
+
 const renderLoginView = (req, res) => {
 
-    return res.render('home.ejs')
+    return res.render('login.ejs')
 }
 const renderDetailServiceView = (req, res) => {
     return res.render('servicios.ejs')
@@ -64,7 +69,18 @@ const renderRegister = (req, res) => {
     console.log('hola')
     fs.writeFileSync('user.json', userDataBase, 'utf-8',);
     res.redirect('home');
+}
 
+const renderRegisterBdD=(req,res)=>{
+    res.send(req.body) 
+    return usuario.create({
+        username:req.body.username,
+        password:req.body.password,
+        gmail:req.body.gmail,
+        name:req.body.name
+    })
+    .then(usuario => res.status(200).send(usuario))
+    .catch(error =>res.status(400).send(error))
 }
 
 
@@ -80,5 +96,6 @@ module.exports = {
     renderServicesSelected,
     login, logout,
     registrar,
-    renderRegister
-};
+    renderRegister,
+    renderRegisterBdD
+}

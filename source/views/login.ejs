@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include("./partials/head.ejs") %>
 </head>
+
 <body>
-    
-    <main> 
-        
+    <header>
+        <%- include('./partials/header.ejs');%>
+    </header>
+
+    <main>
+
         <p1>SOS CLIENTE REGULAR NUESTRO?</p1>
         <div class="ClienteRegular">
             <form action="/login" method="POST">
@@ -16,7 +21,7 @@
                 <label for="password">Contraseña</label><br>
                 <input type="password" name="password" id="password" required> <br>
                 <button type="submit">ACCEDER</button>
-            
+
 
             </form>
         </div>
@@ -27,17 +32,17 @@
             <form action="/registrar" method="POST">
 
                 <label for="username">NOMBRE DE NEGOCIO</label><br>
-                <input type="text" name="username" id="username" > <br>
-                
+                <input type="text" name="username" id="username"> <br>
+
                 <label for="password">INTRODUCE UNA CONSTRASEÑA</label><br>
                 <input type="password" name="password" id="password"> <br>
-                
+
                 <label for="email">DEJANOS TU EMAIL DE CONTACTO</label><br>
-                <input type="email" name="email" id="email" > <br>
-                
+                <input type="email" name="email" id="email"> <br>
+
                 <label for="name">DEJANOS TU NOMBRE Y APELLIDO</label><br>
                 <input type="text" name="name" id="name"> <br>
-                
+
 
                 <button type="submit">REGISTRARSE</button>
             </form>
@@ -46,6 +51,9 @@
 
 
 </body>
+<footer>
+    <%-include('./partials/footer.ejs');%>
+</footer>
 
 
 </html>

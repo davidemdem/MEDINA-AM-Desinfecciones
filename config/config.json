@@ -2,20 +2,20 @@
   "development": {
     "username": "root",
     "password": "gnusmas",
-    "database": "icaro_test",
+    "database": "AmDesinfecciones",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "gnusmas",
+    "password": null,
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "gnusmas",
+    "password": null,
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
