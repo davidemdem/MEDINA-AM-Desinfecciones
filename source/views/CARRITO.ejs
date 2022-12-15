@@ -1,63 +1,34 @@
+  
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <%-include('./partials/head.ejs');%>
-    
+    <%-include('./partials/head.ejs');%>   
+
 </head>
+
 <body>
     <header>
-        <%- include('./partials/header.ejs');%>
+        <%- include('./partials/header.ejs');%>    
     </header>
 
 
     <main>
-        <h1>TUS SERVICIOS SELECCIONADOS</h1>
-
-        <div class="box-carrito">
-            <div class="box-servicio">
-            <p>SERVICIO DE DESINFECCION PARA UN DOMICILIO</p>
-            </div>
-            <div class="box-precio">
-            <p>$4.000</p> </div>
-            <div class="box-solicitar">
-            <button>SOLICITAR</button>
-           
-            </div></div>
-
+        <h1>NUESTROS SERVICIOS</h1>
+    
+        <div id="shopContent" class="shop-content" ></div>
         
-        <div class="box-carrito">   
-            <div class="box-servicio"> 
-            <p>SERVICIO DE DESINFECCION PARA UN LOCAL COMERCIAL</p>
-            </div>
-            <div class="box-precio">
-            <P>$2.500 </P> </div>
-            <div class="box-solicitar">
-            <button>SOLICITAR</button>
-            </div></div>
-
-        
-        <div class="box-carrito">
-        <div class="box-servicio">
-            <p>SERVICIO PARA PLANTAS O MAS DE UN LOCAL</p>
-        </div>
-        <div class="box-precio">
-            <select name="cantidad de locales" id="cant">
-                <option selected value="2">2 LOCALES</option>
-                <option value="3">3 LOCALES</option>
-                <option value="4">4 LOCALES</option>
-                <option value="5">MAS DE 5 LOCALES</option>
-            </select>
-        </div>
-            <div class="box-solicitar">
-            <button>SOLICITAR</button>   
-            </div>
-        </div>
-        
+        <h1 id="verCarrito" class="verCarrito">TUS SERVICIOS SELECCIONADOS🛒<span id="cantidadCarrito" class="cantidadCarrito"></span></h1>
+        <div id="modalContainer"  class="modalContainer"> </div>
+       
     </main>
 </body>
 <footer>
-    <%-include('./partials/footer.ejs');%>
+        <%-include('./partials/footer.ejs')%>   
 </footer>
+
+<script src="/scripts/addCart.js" defer></script>
+<scrpt src="/scrpts/removeCart.js" defer></scrpt>
+
 
 </html>

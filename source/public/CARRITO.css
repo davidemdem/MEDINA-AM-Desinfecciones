@@ -65,52 +65,80 @@ ul div{
 /*------------------main-------------------*/
 main {
     background-color: #699BF7;
-    display: flex;
+    
+}
+.shop-Content{
+display:flex;
+flex-direction:column;
+background-color: #ff5151;
+width: 80%;
+border-top: 10px;
+border-left:10px;
+border-right:10px;
+
+
+}
+.card{
+    background-color: #3fa854;
+    width:70%;
+    display:flex;
+    padding:10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
     flex-direction: column;
-}
-
-.box-carrito{
-    background-color: #ff5151;
-    padding:5px;
-    margin: 5px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius:2px;
     justify-content: space-around;
+    align-items: flex-start;
+
 }
+.price{
+    background-color:#ff5151;
+    display: flex;
+    justify-content: flex-end;
 
+}
+.card button{
+    background-color: #699BF7;
 
-.box-precio{
-    background-color: #4ECB71;
-    width:20%;
-    border-radius: 2px;
-    padding:2px;
+}
+.modalContainer{
+    flex-direction: column;
+    background-color: #3fa854;
+    padding:10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
     
 }
-button{
-    font-size:small;
+
+.modal-content{
+    display:flex;
+    flex-direction: row;
+    background-color: #ff5151;
+    padding:10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+    justify-content: space-between;
+    align-items: center;
+
 }
-.box-servicio{
-    background-color: #d88f8f;
-    width: 50%;
-    border-radius: 2px;
+p{
+    width: 10%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+}
+.verCarrito{
+    text-align: left;
     
 }
-.box-cantidades{
-    background-color: #4ECB71;
-    font-size:small;
+
+.cantidadCarrito{
+    color:rgb(0, 0, 0);
+
+
+    display:none;
 }
-@media(min-width:500px){
-    .box-carrito{
-        width:60%;
-        margin: 15px 15px;
-        padding:20px;}
- .box-servicio{
-    width: 40%;
- }       
-
-
+.total-content{
+    display: flex;
+    justify-content: space-around;
 }
 /*------------------footer-----------------*/
 footer {

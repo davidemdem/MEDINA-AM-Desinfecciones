@@ -1,5 +1,5 @@
 const express=require('express');
-const { renderLoginView, login, renderHomeView, logout, renderRegister, registrar, renderRegisterBdD } = require('../controllers/user');
+const { renderLoginView, login, renderHomeView, logout, renderRegister, registrar, renderRegisterBdD, renderCarrito } = require('../controllers/user');
 const { validateSession, validateNoSession, validateRegister } = require('../middlewares/user');
 
 const router=express.Router();
@@ -8,6 +8,7 @@ router.get('/login',renderLoginView);
 router.post('/login',login);
 router.get('/logout',logout);
 
+router.post('/servicios',renderCarrito)
 router.get('/home',validateSession,renderHomeView);
 
 

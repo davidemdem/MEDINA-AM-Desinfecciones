@@ -98,11 +98,7 @@ h1 {
     font-size:x-large;
 }
 
-main div {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-}
+
 
 .contenedo_msj {
     display: flex;

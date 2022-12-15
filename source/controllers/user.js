@@ -89,6 +89,10 @@ const logout = (req, res) => {
     return res.redirect('login');
 }
 
+const renderCarrito= (req, res) =>{
+    return res.render("carrito.ejs")
+}
+
 module.exports = {
     renderHomeView,
     renderLoginView,
@@ -97,5 +101,6 @@ module.exports = {
     login, logout,
     registrar,
     renderRegister,
-    renderRegisterBdD
+    renderRegisterBdD,
+    renderCarrito
 }
