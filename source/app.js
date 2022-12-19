@@ -59,4 +59,5 @@ app.get('/carrito', (req, res) => {
 
 
 
+
 app.listen(3000, () => console.log('Servidor iniciado en elpuerto 3000'))
