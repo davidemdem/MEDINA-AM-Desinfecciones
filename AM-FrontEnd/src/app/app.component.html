@@ -1,0 +1,23 @@
+<app-product-list>{{ title }}</app-product-list>
+
+  <section class="container py-5">
+    <h1>{{title}}</h1>
+    
+  
+  <div *ngfor="let item of  products" 
+  class="card" >
+      <img src="..." class="card-img-top" >
+      <div class="card-body">
+        <h5 class="card-title">{{item.nombre}}</h5>
+        <p class="card-text">{{item.descripcion}}</p>
+  
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <!--
+  
+          <button (click)=aumentar()>+1</button>
+            <span>{{item.number  }}</span>
+            <button (click)=disminuir()>-1</button>
+          -->
+      </div>
+    </div>
+  </section>
