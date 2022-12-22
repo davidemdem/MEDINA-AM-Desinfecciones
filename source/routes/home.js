@@ -1,10 +1,9 @@
-
 const express = require('express');
 
 const { renderHomeView,
     renderLoginView,
     renderDetailServiceView,
-    renderServicesSelected } = require('../controllers/home');
+    renderServicesSelected } = require('../controllers/user');
 
 const router = express.Router(); //solo necesitamos el modulo de rutas de express//
 
@@ -13,8 +12,8 @@ router.get('/login', renderLoginView);
 router.get('/servicios', renderDetailServiceView);
 router.get('/carrito', renderServicesSelected);
 
-app.use(require('./routes/home'))
-app.use(express.json()) //poder utilizar datos json
+
+
 
 const author=require("../../models").authors
 

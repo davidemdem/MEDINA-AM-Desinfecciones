@@ -5,21 +5,28 @@ import { CookieService } from 'ngx-cookie-service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddProductComponent } from './components/add-product/add-product.component';
-import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-import { ProductListComponent } from './components/product-list/product-list.component';
+
+import { InicioComponent } from './components/inicio/inicio.component';
+import { AgregarComponent } from './components/agregar/agregar.component';
+import { ModificarComponent } from './components/modificar/modificar.component';
+import { HttpClientModule } from '@angular/common/http';
+
+import { FormsModule } from '@angular/forms';// utilizar fromularios
 
 
 @NgModule({
   declarations:[
    AppComponent,
-    AddProductComponent,
-    ProductDetailComponent,
-    ProductListComponent,
+    InicioComponent,
+    AgregarComponent,
+    ModificarComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
+
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]
