@@ -2,6 +2,7 @@ const bcrypt = require("bcrypt");
 
 const fs = require("fs");
 const usuario = require("../../models").usuarios;
+const Servicios = require("../../models").servicios;
 
 let read = fs.readFileSync("user.json", "utf-8");
 let readUsers = JSON.parse(read);
@@ -65,20 +66,7 @@ const renderRegister = (req, res) => {
   fs.writeFileSync("user.json", userDataBase, "utf-8");
   res.redirect("home");
 };
-/*
-const renderRegisterBdD = (req, res) => {
-    console.log("hola")
-  console.log(req.body);
-  return usuario
-    .create({
-      username: req.body.username,
-      password: req.body.password,
-      gmail: req.body.email,
-      name: req.body.name,
-    })
-    .then((usuario) => res.render("home.ejs"))
-    .catch((error) => res.status(400).send(error));
-};  */
+
 
 const logout = (req, res) => {
   req.session.destroy();
@@ -88,6 +76,70 @@ const logout = (req, res) => {
 const renderCarrito = (req, res) => {
   return res.render("carrito.ejs");
 };
+// lista de servicios
+const listService=(req, res) => {
+  
+    Servicios.findAll()
+    .then((response)=>res.status(200).json(response))
+    .catch((err)=>{
+      console.log(err)
+    })
+  }
+  //obtener un servicio
+  const unServicio=(req, res) => {
+    const { id } = req.params;
+    Servicios.findByPk(id)
+    .then((response)=>res.status(200).json(response))
+    .catch((err)=>{
+      console.log(err)
+    })
+  }
+  //crear un servicio
+  const createService= (req, res) => {
+    const { nombre, descripcion, precio } = req.body;
+    const newService = {
+      nombre,
+      descripcion,
+      precio,
+    };
+    Servicios.create(newService)
+      .then((response) => res.status(200).json(response))
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  }
+  //eliminar un servicio
+  const deleteService= (req, res) => {
+    const { id } = req.params;
+    Servicios.destroy({
+      where:{
+        id
+      }
+    })
+      .then((response) => res.status(200).json("se elimino el servicio"))
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);  
+    })
+  }
+  //edit service
+  const editService=(req, res) => {
+    const { id } = req.params;
+    const { nombre, descripcion, precio } = req.body;
+  
+      Servicios.update({
+       nombre ,descripcion,precio
+  
+      },{
+        where:{id}
+      })
+      .then((response) => res.status(200).json("se modifico el servicio"))
+      
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+  });}
 
 module.exports = {
   renderHomeView,
@@ -98,6 +150,6 @@ module.exports = {
   logout,
   registrar,
   renderRegister,
-  //renderRegisterBdD,
   renderCarrito,
+  listService,unServicio,createService,deleteService,editService
 };
