@@ -11,6 +11,7 @@ router.get('/home', renderHomeView);
 router.get('/login', renderLoginView);
 router.get('/servicios', renderDetailServiceView);
 router.get('/carrito', renderServicesSelected);
+router.get('/',renderHomeView)
 
 
 

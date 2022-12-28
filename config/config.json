@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "gnusmas",
-    "database": "AmDesinfecciones",
+    "password": "rootroot",
+    "database": "amdesinfecciones",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

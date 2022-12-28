@@ -1,22 +1,21 @@
-const shopContent = document.getElementById("shopContent");
+const shopContent =document.getElementById("shopContent");
 const verCarrito = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modalContainer");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
+
 
 const servicios = [
   {
     id: 1,
     nombre: "desinfeccion en  domicilio",
-    descripcion:
-      "servicio aplicado para combatir hormigas, cucarachas, alacranes , arañas , etc",
+    descripcion:"servicio aplicado para combatir hormigas, cucarachas, alacranes , arañas , etc",
     precio: 4000,
     cantidad: 1,
   },
   {
     id: 2,
     nombre: "desinfeccion en local comercial",
-    descripcion:
-      "servicio aplicado para combatir hormigas ,cucarachas, alacranes, arañas , etc",
+    descripcion:"servicio aplicado para combatir hormigas ,cucarachas, alacranes, arañas , etc",
     precio: 2500,
     cantidad: 1,
   },

@@ -28,7 +28,7 @@ body header nav div img {
     width: 16px;
     height: 16px;}
 
-p {
+a {
     font-size:large;
     padding: 1px 5px 5px;}
 
@@ -55,7 +55,7 @@ ul div{
     }   
 }
 @media(min-width:600px){
-    p{
+    a{
         font-size: x-large;
     }
 }
@@ -76,23 +76,11 @@ main {
     align-items: center;
 
 } 
-
-.precio{
-    border-radius:5px;
-    background-color: #699BF7;
-    font-size: xx-large;
-}   
-button{
-    background-color:#ff5151;
-    width:auto;
-    height: auto;
-    padding: 5px 5px;
-    margin:5px 10px;
-    display:flex;
-    align-items:center;
-    justify-content: center;
-    border-radius:5px;
+.texto{
+    width: fit-content;
 }
+
+
 select{
     width:auto;
     height:fit-content;
