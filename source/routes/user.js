@@ -11,11 +11,15 @@ const {
   renderRegisterBdD,
   renderCarrito,
 } = require("../controllers/user");
+
+
 const {
   validateSession,
   validateNoSession,
   validateRegister,
 } = require("../middlewares/user");
+
+
 const router = express.Router();
 const conexion = require("../../config/conexion");
 const { servicios } = require("../../models");
@@ -28,9 +32,9 @@ router.post("/servicios", renderCarrito);
 router.get("/home", validateSession, renderHomeView);
 
 router.get("/registrar", registrar);
-router.post("/registrarr", validateRegister, renderRegister, renderHomeView);
+//router.post("/registrarr", validateRegister, renderRegister, renderHomeView);
 
-router.post("/registrar", renderRegisterBdD, renderHomeView);
+router.post("/registrar", renderRegister);
 
 //get todos los servicios
 router.get("/listService", (req, res) => {

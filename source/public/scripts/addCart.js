@@ -165,7 +165,7 @@ servicios.forEach((servicio) => {
     const repeat = carrito.some(
       (repeatProduct) => repeatProduct.id === servicio.id
     );
-    console.log("hola", repeat);
+    //console.log("hola", repeat);
     if (repeat === true) {
       carrito.map((prod) => {
         if (prod.id === servicio.id) {
