@@ -1,34 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { Routes } from '@angular/router';
-import { CookieService } from 'ngx-cookie-service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { InicioComponent } from './components/inicio/inicio.component';
-import { AgregarComponent } from './components/agregar/agregar.component';
-import { ModificarComponent } from './components/modificar/modificar.component';
-import { HttpClientModule } from '@angular/common/http';
-
-import { FormsModule } from '@angular/forms';// utilizar fromularios
-
+import { AddProductComponent } from './components/add-product/add-product.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { ProductsListComponent } from './components/products-list/products-list.component';
 
 @NgModule({
-  declarations:[
-   AppComponent,
-    InicioComponent,
-    AgregarComponent,
-    ModificarComponent,
+  declarations: [
+    AppComponent,
+    AddProductComponent,
+    ProductDetailComponent,
+    ProductsListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-
+    AppRoutingModule
   ],
-  providers: [CookieService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

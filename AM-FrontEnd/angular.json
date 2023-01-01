@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AM-FrontEnd": {
+    "AM-frontEND": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -60,11 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "AM-FrontEnd:build:production",
-              "proxyConfig": "proxy.conf.json"
+              "browserTarget": "AM-frontEND:build:production"
             },
             "development": {
-              "browserTarget": "AM-FrontEnd:build:development"
+              "browserTarget": "AM-frontEND:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AM-FrontEnd:build"
+            "browserTarget": "AM-frontEND:build"
           }
         },
         "test": {
