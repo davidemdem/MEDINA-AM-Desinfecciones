@@ -1,1 +1,20 @@
-<p>products-list works!</p>
+<h1>LISTA DE SERVICIOS</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th  scope="col">ID</th>
+                <th class="table-primary" scope="col">NOMBRE</th>
+                <th class="table-primary" scope="col">PRECIO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor= "let lista of Listar">
+                <th>{{lista.id}}</th>
+                <td class="table-primary">{{lista.nombre}}</td>
+                <td class="table-primary">${{lista.precio}}</td>
+                <td><button type="button" class="btn btn-primary">EDITAR </button></td>
+                <td><button type="button" class="btn btn-danger">ELIMINAR</button> </td>
+            </tr>
+        </tbody>
+ </table>
+

@@ -1,1 +1,24 @@
-<p>product-detail works!</p>
+
+<h3>ELEGI UN SERVICIO Y MIRA SUS DETALLES Y CUIDADOS</h3>
+    <table class="table ">
+        <thead>
+            <tr>
+                <th class="table-primary" scope="col">NOMBRE</th>
+                <th scope="col"></th>
+                <th class="table-danger" scope="col" *ngIf= "showSection">DESCRIPCION</th>
+                <th class="table-primary" scope="col" *ngIf= "showSection">PRECIO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor= "let lista of Listar">
+                <td class="table-primary" scope="col">{{lista.nombre}}</td>
+                <td scope="col"><button (click)= "toggleShowSection()" type="button" class="btn btn-primary" >+INFO </button></td>
+                <td class="table-danger" *ngIf= "showSection">{{lista.descripcion}}</td>
+                <td class="table-primary" *ngIf= "showSection">${{lista.precio}}</td>
+                
+                </tr>
+        </tbody>
+ </table>
+ 
+            
+

@@ -1,1 +1,20 @@
-<p>add-product works!</p>
+<div>
+    <h1>AGREGAR SERVICIO</h1>
+    <DIV CLASS="ROW">
+        <div class="col-sm-6">
+
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">NOMBRE DEL SERVICIO</label>
+                    <input [(ngModel)]="seervicio.nombre" type="text" class="form-control" name="nombre">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">DESCPRIPCION</label>
+                    <input [(ngModel)]="seervicio.descripcion" type="text" class="form-control" name="DESCPRIPCION">
+                </div>
+                <button (click)="agregar()" type="button" class="btn btn-primary">AGREGAR</button>
+
+            </form>
+        </div>
+       
