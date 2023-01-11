@@ -1,5 +1,5 @@
-<form>
-    <h3>CREA TU CUENTA CON NOSOTROS!</h3>
+<form class="form-group">
+    <span>TIENES UNA CUENTA ? SI NO LA TIENES , LLENA EL FORMULARIO Y CREATE UNA!</span>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Por favor introduce tu email</label>
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -13,5 +13,5 @@
         <label for="exampleInputPassword1" class="form-label">Por favor,repite la contraseña </label>
         <input type="password" class="form-control" id="exampleInputPassword1">
       </div>
-    <button type="submit" class="btn btn-primary">CREAR CUENTA</button>
+    <button  (click)="register()" class="btn btn-primary">CREAR CUENTA</button>
   </form>

@@ -15,6 +15,7 @@ export class AddProductComponent implements OnInit{
     "id":'',
     "nombre":'',
     "descripcion":'',
+    "precio": 300
     
   };
   Listar: Servicio[] | undefined;

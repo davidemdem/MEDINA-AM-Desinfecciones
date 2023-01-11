@@ -1,14 +1,24 @@
-<form>
-    <h3>INICIAR SESION  </h3>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Por favor introduce tu email</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">No te preocupes, no compartiremos tus datos con nadie!</div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Por favor, introduce tu contraseña </label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <button type="submit" class="btn btn-primary">INICIAR SESION</button>
-  </form>
+<h3>INICIAR SESION </h3>
+
+ <form ngSubmit="login()" #miForm="ngForm" class="form-group">
+  <div class="mb-3"  >
+    <label for="exampleInputEmail1" class="form-label">Por favor introduce tu email</label>
+    <input ngModel name="email" 
+    type="email" 
+    required
+    class="form-control" 
+    id="exampleInputEmail1" 
+    aria-describedby="emailHelp">
+  <div id="emailHelp" class="form-text">No te preocupes, no compartiremos tus datos con nadie!</div>
+  </div>
+  <div class="mb-3"  >
+    <label for="exampleInputPassword1" class="form-label">Por favor, introduce tu contraseña </label>
+    <input ngModel name="contraseña" minlength="6" required
+    type="password" 
+    class="form-control" 
+    id="exampleInputPassword1">
+  </div>
+  <button (click)= "login(miForm)"[disabled]= "miForm.invalid" type="submit" class="btn btn-primary">INICIAR SESION</button>
   
+</form>
+

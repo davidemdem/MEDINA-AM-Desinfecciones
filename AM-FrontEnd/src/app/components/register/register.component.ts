@@ -18,7 +18,7 @@ export class RegisterComponent {
   register() {
     const usuario= { email: this.email, password: this.password };
     this.userService.register(usuario).subscribe(data => {
-      this.userService.setToken(data.token)
+     // this.userService.setToken(data.token)
       this.router.navigateByUrl('/');
     },
     error=>{console.log(error)}

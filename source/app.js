@@ -37,6 +37,9 @@ app.use(
 app.use(cookie());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+
+
+app.use("/admin",require("./routes/admin"));
 app.use(require("./routes/home"));
 app.use(require("./routes/helpers"));
 app.use(require("./routes/user"));

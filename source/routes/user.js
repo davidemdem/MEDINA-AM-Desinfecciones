@@ -46,7 +46,7 @@ router.get("/listService",listService);
 router.get("/:id",unServicio);
 
 //agregar servicio
-router.post("/create",createService);
+router.post("/listService",createService);
 
 // eliminar servicio
 router.delete("/:id",deleteService);

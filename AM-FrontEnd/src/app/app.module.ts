@@ -1,6 +1,8 @@
-import { FormsModule } from '@angular/forms';
+
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { CookieService } from 'ngx-cookie-service';
+
 
 //modulos
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
@@ -14,7 +16,7 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component'
-import { HomeComponent } from './components/home/home.component';
+
  //servicios
 import {ProductsService} from './service/products.service';
 
@@ -22,7 +24,7 @@ import {ProductsService} from './service/products.service';
   declarations: 
   [AppComponent,AddProductComponent,
   ProductDetailComponent,ProductsListComponent,
-   LoginComponent, RegisterComponent, HomeComponent]
+   LoginComponent, RegisterComponent]
   ,
   imports: 
   [FormsModule,BrowserModule,AppRoutingModule,HttpClientModule]

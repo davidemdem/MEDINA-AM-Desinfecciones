@@ -7,15 +7,15 @@ import {ProductsListComponent} from './components/products-list/products-list.co
 import { LoginComponent } from './components/login/login.component'
 import { RegisterComponent } from './components/register/register.component';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
+
 
 const routes: Routes = [
 
-  {path:'',component:AppComponent,pathMatch:'full'},
-  {path:'Home',component:HomeComponent,pathMatch:'full'},
+  {path:'',redirectTo:'home',pathMatch:'full' },
+  
   {path:'login',component:LoginComponent,pathMatch:'full'},
   {path:'register',component:RegisterComponent,pathMatch:'full'},
-  {path:'productList',component:ProductsListComponent},
+  {path:'productList',component:ProductsListComponent,pathMatch:'full'},
   {path:'productList/:id',component:ProductDetailComponent},
   {path:'add',component:AddProductComponent}
 ];
